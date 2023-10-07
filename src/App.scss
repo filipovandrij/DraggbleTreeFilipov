@@ -1,4 +1,118 @@
+body {
+  height: 97vh;
+  background-color: #f5f7fb;
+}
+
 .app {
-  background-color: red;
-  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+  .draggble-container {
+    width: 94%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid #c6d0d8;
+    height: 80vh;
+  }
+}
+
+.family-tree {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  transform: scale();
+  cursor: move;
+  .block {
+    display: flex;
+    justify-content: center;
+  }
+  .father-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    input {
+      min-width: 20px;
+      max-width: 80px;
+    }
+  }
+  span {
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px dashed black;
+  }
+  button {
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0.8);
+  }
+
+  .delete-button {
+    background-color: #fa3b70;
+
+    color: white;
+    font-size: 20px;
+  }
+  .add-button {
+    color: white;
+    background-color: #c6d0d8;
+    font-size: 20px;
+  }
+  .edit-button {
+    color: white;
+    background-color: #c6d0d8;
+
+    padding-bottom: 4px;
+  }
+}
+
+.family-tree > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.family-tree > div > .family-tree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggble_with_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.move_tree_btn {
+  width: 100px;
+  height: 34px;
+  background-color: #c6d0d8;
+  border: 1px solid #eef0f4;
+  color: white;
+}
+
+.move_btn_side {
+  width: 3%;
+  height: 100px;
+  background-color: #c6d0d8;
+  border: 1px solid #eef0f4;
+  color: white;
 }
